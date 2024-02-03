@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="-95dp"
+        tools:layout_editor_absoluteY="130dp">
+
+        <EditText
+            android:id="@+id/eventName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="Nombre del evento"
+            android:inputType="text"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/eventType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventName"
+            android:layout_marginTop="16dp"
+            android:inputType="text"
+            android:focusable="true"
+            android:clickable="true"
+            android:hint="Tipo de evento" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/eventType"
+            android:layout_marginTop="16dp"
+            android:inputType="textMultiLine"
+            android:focusable="true"
+            android:clickable="true"
+            android:hint="Descripción"/>
+
+
+        <EditText
+            android:id="@+id/startDate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/endDate"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="false"
+            android:hint="Fecha Inicio" />
+
+        <EditText
+            android:id="@+id/endDate"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/description"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:inputType="date"
+            android:focusable="false"
+            android:clickable="false"
+            android:hint="Fecha Fin" />
+
+        <CheckBox
+            android:id="@+id/allDay"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/endDate"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="12dp"
+            android:hint="All Day" />
+
+        <Button
+            android:id="@+id/confirmButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/allDay"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Confirmar" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allDay"
+            android:layout_toLeftOf="@id/confirmButton"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="Cancelar" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
